@@ -1,0 +1,39 @@
+ALGORITHM Checkpoint9_Dot_Product_procedure
+
+PROCEDURE dot_product(v1,v2: ARRAY_OF INTEGER[50])
+VAR
+    ps=0 :INTEGER;
+    i: INTEGER;
+BEGIN
+    IF (length.v1=length.v2 ) THEN
+        FOR i FROM 0 TO length.v1-1 STEP 1  DO
+            ps+= v1[i]*v2[i];
+            if (sum=0) 
+        write("v1 and v2 are orthogonal vectors");
+        END_FOR
+    END_IF
+END
+VAR
+    ps,i,n: INTEGER;
+    v1,v2: ARRAY_OF INTEGER[50]; 
+BEGIN
+    REPEAT 
+    write("Enter v1 number of elements");
+    read(n);
+UNTIL (n>0)
+FOR i FROM  0 TO n STEP 1  DO
+    REPEAT
+        write ("Enter a vector value");
+        read (v1[i]);
+    UNTIL (v1[i]=Isinteger())
+    
+END_FOR
+FOR i FROM  0  TO n STEP 1  DO
+    REPEAT
+        write ("Enter v2 number of elements")
+        read (v2[i])
+    UNTIL (v2[i]=Isinteger())
+    
+END_FOR
+dot_product(a,b,ps);
+END
